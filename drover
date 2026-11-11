@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+cd "$DIR"
+
+# Build shared library if not already built
+if [ ! -f "libdrover.so" ]; then
+    echo "Building libdrover.so..."
+    make
+fi
+
+python3 drover-gui.py "$@"

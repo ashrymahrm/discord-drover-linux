@@ -1,0 +1,11 @@
+# Build artifacts
+*.o
+*.so
+drover_packet_blob.c
+
+# Python
+__pycache__/
+*.pyc
+
+# Local config
+*.local
